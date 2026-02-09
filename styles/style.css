@@ -50,6 +50,11 @@ nav a {
     padding: 5px;
 }
 
+nav a:hover {
+    background-color: #fef6f0;
+    color: #930a0c;
+}
+
 .bar1, .bar2, .bar3 {
     width: 30px;
     height: 4px;
@@ -107,7 +112,8 @@ nav a {
 }
 
 .AI img {
-    height: 300px;
+    width: 100%;
+    max-width: 500px;
 }
 
 .AI p {
@@ -139,4 +145,23 @@ footer img {
 footer p {
     margin: 30px;
     align-self: end;
+}
+
+@media screen and (min-width: 800px) {
+    .AI_boxes {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hidden {
+        display:block;
+    }
+
+    button {
+        display: none;
+    }
+
+    nav a {
+        border: none;
+        font-size: 1.25em;
+    }
 }

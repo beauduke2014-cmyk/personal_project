@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta author="Carter Weber">
     <meta description="An AI built to help with all aspects of running and playing a part in a Dungeons and Dragons campaign">
-    <title>Saga Weaver AI</title>
+    <title>Player AI</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles/style.css">
     <script defer src="scripts/script.js"></script>
@@ -21,14 +21,119 @@
         </button>
         <nav id="main-nav" class="hidden">
             <a href="index.html">Home</a>
-            <a href="">DM</a>
+            <a href="dm.html">DM</a>
             <a href="player.html">Player</a>
-            <a href="">Sign In</a>
+            <a href="sign_in.html">Sign In</a>
         </nav>
         
     </header>
-    
-    
+    <div class="character_sheet">
+        <div class="character_info">
+            <p id="characterName">Name: </p>
+            <p id="class">Class: </p>
+            <p id="level">Level: </p>
+            <p id="background">Background: </p>
+            <p id="race">Race/Origin: </p>
+            <p id="alignment">Alignment: </p>
+            <p id="exp">Experience Points: </p>
+        </div>
+        <div class="abilityScores">
+            <h2>Ability Scores</h2>
+            <p id="strength">Strength: Bonus: </p>
+            <p id="dexterity">Dexterity: Bonus: </p>
+            <p id="constitution">Constitution: Bonus: </p>
+            <p id="intelligence">Intelligence: Bonus: </p>
+            <p id="wisdom">Wisdom: Bonus: </p>
+            <p id="charisma">Charisma: Bonus: </p>
+        </div>
+        <div class="saving_throws">
+            <h2>Saving Throws</h2>
+            <p id="strength_save">Strength: </p>
+            <p id="dexterity_save">Dexterity: </p>
+            <p id="constitution_save">Constitution: </p>
+            <p id="intelligence_save">Intelligence: </p>
+            <p id="wisdom_save">Wisdom: </p>
+            <p id="charisma_save">Charisma: </p>
+        </div>
+        <div class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li id="acrobatics">Acrobatics <i class="ability">&lpar;Dex&rpar;</i>: </li>
+                <li id="animal_handling">Animal Handling <i class="ability">&lpar;Wis&rpar;</i>: </li>
+                <li id="arcana">Arcana <i class="ability">&lpar;Int&rpar;</i>: </li>
+                <li id="athletics">Athletics <i class="ability">&lpar;Str&rpar;</i>: </li>
+                <li id="deception">Deception <i class="ability">&lpar;Cha&rpar;</i>: </li>
+                <li id="history">History <i class="ability">&lpar;Int&rpar;</i>: </li>
+                <li id="insight">Insight <i class="ability">&lpar;Wis&rpar;</i>: </li>
+                <li id="intimidation">Intimidation <i class="ability">&lpar;Cha&rpar;</i>: </li>
+                <li id="investigation">Investigation <i class="ability">&lpar;Int&rpar;</i>: </li>
+                <li id="medicine">Medicine <i class="ability">&lpar;Wis&rpar;</i>: </li>
+                <li id="nature">Nature <i class="ability">&lpar;Int&rpar;</i>: </li>
+                <li id="perception">Perception <i class="ability">&lpar;Wis&rpar;</i>: </li>
+                <li id="performance">Performance <i class="ability">&lpar;Cha&rpar;</i>: </li>
+                <li id="persuasion">Persuasion <i class="ability">&lpar;Cha&rpar;</i>: </li>
+                <li id="religion">Religion <i class="ability">&lpar;Int&rpar;</i>: </li>
+                <li id="sleight_of_hand">Sleight of Hand <i class="ability">&lpar;Dex&rpar;</i>: </li>
+                <li id="stealth">Stealth <i class="abilty">&lpar;Dex&rpar;</i>: </li>
+                <li id="survivial">Survival <i class="ability">&lpar;Wis&rpar;</i>: </li>
+            </ul>
+        </div>
+        <div class="special_info">
+            <h2>Important Info</h2>
+            <p id="armor_class">Armor Class: </p>
+            <p id="initiative">Initiative: </p>
+            <p id="speed">Speed: </p>
+            <p id="proficiency">Proficiency Bonus: </p>
+            <p id="passive_perceptions">Passive Wisdom/Perception: </p>
+            <p id="current_hp">Current Hit Points: </p>
+            <p id="temp_hp">Temporary Hit Points: </p>
+            <p id="max_hp">Maximum Hit Points: </p>
+            <p id="hit_dice">Hit Dice: </p>
+            <div class="death_saves">
+                <h3>Death Saves</h3>
+                <p>Successes: </p>
+                <p>Failures: </p>
+            </div>
+        </div>
+        <div class="proficiencies">
+            <h2>Other Proficiencies and Languages</h2>
+        </div>
+        <div class="attacks">
+            <h2>Attacks and Spellcasting</h2>
+        </div>
+        <div class="about_character">
+            <h2>About Your Character</h2>
+            <div class="personality">
+                <h3>Personality Traits</h3>
+            </div>
+            <div class="ideals">
+                <h3>Ideals</h3>
+            </div>
+            <div class="bonds">
+                <h3>Bonds</h3>
+            </div>
+            <div class="flaws">
+                <h3>Flaws</h3>
+            </div>
+        </div>
+        <div class="inventory">
+            <h2>Inventory</h2>
+            <div class="money">
+                <h3>Money</h3>
+                <p>CP <i>&lpar;Copper Pieces&rpar;</i>: </p>
+                <p>SP <i>&lpar;Silver Pieces&rpar;</i>: </p>
+                <p>EP <i>&lpar;Electrum Pieces&rpar;</i>: </p>
+                <p>GP <i>&lpar;Gold Pieces&rpar;</i>: </p>
+                <p>PP <i>&lpar;Platinum Pieces&rpar;</i>: </p>
+            </div>
+        </div>
+        <div class="features">
+            <h2>Features and Traits</h2>
+        </div>
+    </div>
+    <div class="AI_chat">
+
+    </div>
     <footer>
         <img src="images/SagaWeaverAI_Logo.webp" alt="Saga Weaver AI Logo of red dragon circling S and W">
         <p>&copy;2026 Saga Weaver AI</p>
