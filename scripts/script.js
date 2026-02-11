@@ -11,3 +11,9 @@ function toggleMenu() {
     btn.setAttribute('aria-expanded', isOpen);
 
 }
+
+document.querySelectorAll('.dot').forEach(dot => {
+    dot.addEventListener('click', () => {
+        dot.classList.toggle('active');
+    })
+})

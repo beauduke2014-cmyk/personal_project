@@ -147,6 +147,179 @@ footer p {
     align-self: end;
 }
 
+.character_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 10px;
+}
+
+.character_info p {
+    border-radius: 5px;
+    border: 2px solid #930a0c;
+    padding: 5px;
+    margin: 5px;
+}
+
+.special_info {
+    border-top: 2px solid #0c0c0c;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.special_info h2 {
+    grid-column: 1/4;
+    margin: auto;
+}
+
+.special_info p {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #930a0c;
+    margin: 5px;
+}
+
+.death_saves {
+    grid-column: 1/4;
+    text-align: center;
+    border-top: 2px solid #0c0c0c;
+}
+
+.successes .failures {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 5px 0;
+}
+
+.dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #930a0c;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+.dot.active {
+    background-color: #930a0c;
+}
+
+.abilityScores {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 10px;
+    border-top: 2px solid #0c0c0c;
+}
+
+.abilityScores h2 {
+    grid-column: 1/4;
+    margin: auto;
+}
+
+.abilityScores p {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #930a0c;
+    margin: 5px;
+}
+
+.saving_throws {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 10px;
+    border-top: 2px solid #0c0c0c;
+}
+
+.saving_throws h2 {
+    grid-column: 1/4;
+    margin: auto;
+}
+
+.saving_throws p {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #930a0c;
+    margin: 5px;
+}
+
+.skills {
+    text-align: center;
+    border-top: 2px solid #0c0c0c;
+    margin: 10px;
+}
+
+.skills ul {
+    text-align: left;
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.skills li {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #930a0c;
+    margin: 5px;
+}
+
+.proficiencies {
+    text-align: center;
+    border-top: 2px solid #0c0c0c;
+    margin: 10px;
+}
+
+.attacks {
+    margin: 10px;
+    border-top: 2px solid #0c0c0c;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.attacks h2 {
+    grid-column: 1/4;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.attacks p {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #930a0c;
+    margin: 5px;
+}
+
+.about_character {
+    margin: 10px;
+    border-top: 2px solid #0c0c0c;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about_character h2 {
+    grid-column: 1/3;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.personality, .bonds {
+    border-right: 2px solid #0c0c0c;
+    padding-right: 5px;
+}
+
+.ideals, .flaws {
+    margin-left: 5px;
+}
+
+.about_character p {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #930a0c;
+    margin: 5px;
+}
+
 @media screen and (min-width: 800px) {
     .AI_boxes {
         grid-template-columns: 1fr 1fr;
