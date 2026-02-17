@@ -170,3 +170,104 @@
     border: 2px solid #930a0c;
     margin: 5px;
 }
+
+.backstory {
+    margin: 5px;
+    border-top: 2px solid #0c0c0c;
+    text-align: center;
+}
+
+.inventory {
+    margin: 5px;
+    border-top: 2px solid #0c0c0c;
+}
+
+.inventory h2 {
+    text-align: center;
+}
+
+.items h3 {
+    text-align:center;
+}
+
+.money {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-top: 2px dotted #0c0c0c;
+}
+
+.money h3 {
+    grid-column: 1/4;
+    text-align: center;
+}
+
+.money p{
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #930a0c;
+    margin: 5px;
+}
+
+.features {
+    border-top: 2px solid #0c0c0c;
+    text-align: center;
+}
+
+.spell_sheet {
+    border-top: 2px solid #0c0c0c;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.spell_sheet h2 {
+    grid-column: 1/3;
+    text-align: center;
+    border-top: 2px solid #0c0c0c;
+}
+
+.spell_casting {
+    border-right: 2px solid #0c0c0c;
+}
+
+.spell_casting h2 {
+    text-align: center;
+    border: none;
+}
+
+.spell_casting p {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #930a0c;
+    margin: 5px;
+}
+
+.spell_notes {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    margin-left: 5px;
+}
+
+.spell_notes h2 {
+    text-align: center;
+    grid-column: 1/3;
+    border: none;
+}
+
+.cantrips, .level_one, .level_two, .level_three, .level_four, .level_five, .level_six, .level_seven, .level_eight, .level_nine {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #930a0c;
+    margin: 5px;
+}
+
+.AI_chat {
+    margin: 5px;
+    text-align: center;
+}
+
+.AI_chat p {
+    margin: 5px;
+    border-radius: 5px;
+    border: 2px solid #930a0c;
+    padding: 5px;
+}
