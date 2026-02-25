@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/player.css">
     <script defer src="scripts/script.js"></script>
+    <script defer src="scripts/player.js"></script>
 </head>
 <body>
     <header>
@@ -28,221 +29,244 @@
         </nav>
         
     </header>
-    <div class="character_sheet">
-        <div class="character_info">
-            <p id="characterName">Name: </p>
-            <p id="class">Class: </p>
-            <p id="level">Level: </p>
-            <p id="background">Background: </p>
-            <p id="race">Race/Origin: </p>
-            <p id="alignment">Alignment: </p>
-            <p id="exp">Experience Points: </p>
+    <div class="character_page">
+        <div class="AI_chat">
+            <h2>Saga Weaver AI Chat</h2>
+            <p id="saga_chat">Chat logs will show up here</p>
+            <label for="AI_input">Enter prompt here:</label>
+            <input type="text" id="AI_input" name="AI_input">
         </div>
-        <div class="special_info">
-            <h2>Important Info</h2>
-            <p id="armor_class">Armor Class: </p>
-            <p id="initiative">Initiative: </p>
-            <p id="speed">Speed: </p>
-            <p id="proficiency">Proficiency Bonus: </p>
-            <p id="passive_perceptions">Passive Wisdom/Perception: </p>
-            <p id="current_hp">Current Hit Points: </p>
-            <p id="temp_hp">Temporary Hit Points: </p>
-            <p id="max_hp">Maximum Hit Points: </p>
-            <p id="hit_dice">Hit Dice: </p>
-            <div class="death_saves">
-                <h3>Death Saves</h3>
-                <div class="successes">
-                    <span>Successes:</span>
-                    <button class="dot"></button>
-                    <button class="dot"></button>
-                    <button class="dot"></button>
+        <div class="character_sheet">
+            <div class="character_info">
+                <p id="characterName">Name: <span class="editable" data-field="name">------</span></p>
+                <p id="class">Class: <span class="editable" data-field="class">------</span></p>
+                <p id="level">Level: <span class="editable" data-field="level">------</span></p>
+                <p id="background">Background: <span class="editable" data-field="background">------</span></p>
+                <p id="race">Race/Origin: <span class="editable" data-field="race">------</span></p>
+                <p id="alignment">Alignment: <span class="editable" data-field="alignment">------</span></p>
+                <p id="exp">Experience Points: <span class="editable" data-field="exp">------</span></p>
+            </div>
+            <div class="special_info">
+                <h2>Important Info</h2>
+                <p id="armor_class">Armor Class: <span class="editable" data-field="armor_class">------</span></p>
+                <p id="initiative">Initiative: </p>
+                <p id="speed">Speed: </p>
+                <p id="proficiency">Proficiency Bonus: </p>
+                <p id="passive_perceptions">Passive Wisdom/Perception: </p>
+                <p id="current_hp">Current Hit Points: <span class="editable" data-field="current_hp">------</span></p>
+                <p id="temp_hp">Temporary Hit Points: <span class="editable" data-field="temp_hp">------</span></p>
+                <p id="max_hp">Maximum Hit Points: <span class="editable" data-field="max_hp">------</span></p>
+                <p id="hit_dice">Hit Dice: </p>
+                <div class="death_saves">
+                    <h3>Death Saves</h3>
+                    <div class="successes">
+                        <span>Successes:</span>
+                        <button class="dot"></button>
+                        <button class="dot"></button>
+                        <button class="dot"></button>
+                    </div>
+                    <div class="failures">
+                        <span>Failures:</span>
+                        <button class="dot"></button>
+                        <button class="dot"></button>
+                        <button class="dot"></button>
+                    </div>
                 </div>
-                <div class="failures">
-                    <span>Failures:</span>
-                    <button class="dot"></button>
-                    <button class="dot"></button>
-                    <button class="dot"></button>
+            </div>
+            <div class="abilityScores">
+                <h2>Ability Scores</h2>
+                <p id="strength">Strength: <span class="editable" data-field="strength">---</span> Bonus: </p>
+                <p id="dexterity">Dexterity: <span class="editable" data-field="dexterity">---</span> Bonus: </p>
+                <p id="constitution">Constitution: <span class="editable" data-field="constitution">---</span> Bonus: </p>
+                <p id="intelligence">Intelligence: <span class="editable" data-field="intelligence">---</span> Bonus: </p>
+                <p id="wisdom">Wisdom: <span class="editable" data-field="wisdom">---</span> Bonus: </p>
+                <p id="charisma">Charisma: <span class="editable" data-field="charisma">---</span> Bonus: </p>
+            </div>
+            <div class="saving_throws">
+                <h2>Saving Throws</h2>
+                <p id="strength_save">Strength: </p>
+                <p id="dexterity_save">Dexterity: </p>
+                <p id="constitution_save">Constitution: </p>
+                <p id="intelligence_save">Intelligence: </p>
+                <p id="wisdom_save">Wisdom: </p>
+                <p id="charisma_save">Charisma: </p>
+            </div>
+            <div class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li id="acrobatics">Acrobatics <i class="ability">&lpar;Dex&rpar;</i>: </li>
+                    <li id="animal_handling">Animal Handling <i class="ability">&lpar;Wis&rpar;</i>: </li>
+                    <li id="arcana">Arcana <i class="ability">&lpar;Int&rpar;</i>: </li>
+                    <li id="athletics">Athletics <i class="ability">&lpar;Str&rpar;</i>: </li>
+                    <li id="deception">Deception <i class="ability">&lpar;Cha&rpar;</i>: </li>
+                    <li id="history">History <i class="ability">&lpar;Int&rpar;</i>: </li>
+                    <li id="insight">Insight <i class="ability">&lpar;Wis&rpar;</i>: </li>
+                    <li id="intimidation">Intimidation <i class="ability">&lpar;Cha&rpar;</i>: </li>
+                    <li id="investigation">Investigation <i class="ability">&lpar;Int&rpar;</i>: </li>
+                    <li id="medicine">Medicine <i class="ability">&lpar;Wis&rpar;</i>: </li>
+                    <li id="nature">Nature <i class="ability">&lpar;Int&rpar;</i>: </li>
+                    <li id="perception">Perception <i class="ability">&lpar;Wis&rpar;</i>: </li>
+                    <li id="performance">Performance <i class="ability">&lpar;Cha&rpar;</i>: </li>
+                    <li id="persuasion">Persuasion <i class="ability">&lpar;Cha&rpar;</i>: </li>
+                    <li id="religion">Religion <i class="ability">&lpar;Int&rpar;</i>: </li>
+                    <li id="sleight_of_hand">Sleight of Hand <i class="ability">&lpar;Dex&rpar;</i>: </li>
+                    <li id="stealth">Stealth <i class="ability">&lpar;Dex&rpar;</i>: </li>
+                    <li id="survival">Survival <i class="ability">&lpar;Wis&rpar;</i>: </li>
+                </ul>
+            </div>
+            <div class="proficiencies">
+                <h2>Other Proficiencies and Languages</h2>
+                <p><span class="editable" data-field="proficiencies">------</span></p>
+            </div>
+            <div class="attacks">
+                <h2>Attacks and Spellcasting</h2>
+                <p>Item Name:</p>
+                <p>To Hit Bonus:</p>
+                <p>Damage Die w/ Bonus:</p>
+            </div>
+            <div class="about_character">
+                <h2>About Your Character</h2>
+                <div class="personality">
+                    <h3>Personality Traits:</h3>
+                    <p><span class="editable" data-field="personality">Personality Trait</span></p>
+                </div>
+                <div class="ideals">
+                    <h3>Ideals:</h3>
+                    <p><span class="editable" data-field="ideals">Ideal</span></p>
+                </div>
+                <div class="bonds">
+                    <h3>Bonds:</h3>
+                    <p><span class="editable" data-field="bonds">Bond</span></p>
+                </div>
+                <div class="flaws">
+                    <h3>Flaws:</h3>
+                    <p><span class="editable" data-field="flaws">Flaw</span></p>
+                </div>
+            </div>
+            <div class="backstory">
+                <h2><span class="editable" data-field="backstory">Backstory</span></h2>
+            </div>
+            <div class="inventory">
+                <h2>Inventory</h2>
+                <div class="items">
+                    <h3>Items</h3>
+                    <p><span class="editable" data-field="items">Item</span></p>
+                </div>
+                <div class="money">
+                    <h3>Money</h3>
+                    <p>CP <i>&lpar;Copper Pieces&rpar;</i>: <span class="editable" data-field="copper">---</span></p>
+                    <p>SP <i>&lpar;Silver Pieces&rpar;</i>: <span class="editable" data-field="silver">---</span></p>
+                    <p>EP <i>&lpar;Electrum Pieces&rpar;</i>: <span class="editable" data-field="electrum">---</span></p>
+                    <p>GP <i>&lpar;Gold Pieces&rpar;</i>: <span class="editable" data-field="gold">---</span></p>
+                    <p>PP <i>&lpar;Platinum Pieces&rpar;</i>: <span class="editable" data-field="platinum">---</span></p>
+                </div>
+            </div>
+            <div class="features">
+                <h2>Features and Traits</h2>
+                <p><span class="editable" data-field="features">------</span></p>
+            </div>
+            <div class="spell_sheet">
+                <div class="spell_casting">
+                    <h2>Spell Casting Ability</h2>
+                    <p id="modifier">Spellcasting Modifier: </p>
+                    <p id="bonus">Spellcasting Bonus: </p>
+                    <p id="save">Spell Save DC <i>&lpar;Difficulty Class&rpar;</i>: </p>
+                </div>
+                <div class="spell_notes">
+                    <h2>Spell Notes</h2>
+                    <p>C = Concentration</p>
+                    <p>Rt = Ritual</p>
+                    <p>Ba = Bonus Action</p>
+                    <p>Re = Reaction</p>
+                    <p>In = Instantaneous</p>
+                    <p>V = Verbal</p>
+                    <p>S = Somatic</p>
+                    <p>M = Material</p>
+                </div>
+                <h2>Spells</h2>
+                <div class="cantrips">
+                    <h3>Cantrips</h3>
+                    <ul id="cantrip_spells">
+                        
+                    </ul>
+                    <label for="add_cantrip">Add Cantrip Spell:</label>
+                    <input type="text" id="add_cantrip" placeholder="Spell Name">
+                </div>
+                <div class="level_one">
+                    <h3>Level One</h3>
+                    <ul id="level_one_spells">
+                        
+                    </ul>
+                    <label for="add_level_one">Add Level One Spell:</label>
+                    <input type="text" id="add_level_one" placeholder="Spell Name">
+                </div>
+                <div class="level_two">
+                    <h3>Level Two</h3>
+                    <ul id="level_two_spells">
+                        
+                    </ul>
+                    <label for="add_level_two">Add Level Two Spell:</label>
+                    <input type="text" id="add_level_two" placeholder="Spell Name">
+                </div>
+                <div class="level_three">
+                    <h3>Level Three</h3>
+                    <ul id="level_three_spells">
+                        
+                    </ul>
+                    <label for="add_level_three">Add Level Three Spell:</label>
+                    <input type="text" id="add_level_three" placeholder="Spell Name">
+                </div>
+                <div class="level_four">
+                    <h3>Level Four</h3>
+                    <ul id="level_four_spells">
+                        
+                    </ul>
+                    <label for="add_level_four">Add Level Four Spell:</label>
+                    <input type="text" id="add_level_four" placeholder="Spell Name">
+                </div>
+                <div class="level_five">
+                    <h3>Level Five</h3>
+                    <ul id="level_five_spells">
+                        
+                    </ul>
+                    <label for="add_level_five">Add Level Five Spell:</label>
+                    <input type="text" id="add_level_five" placeholder="Spell Name">
+                </div>
+                <div class="level_six">
+                    <h3>Level Six</h3>
+                    <ul id="level_six_spells">
+                        
+                    </ul>
+                    <label for="add_level_six">Add Level Six Spell:</label>
+                    <input type="text" id="add_level_six" placeholder="Spell Name">
+                </div>
+                <div class="level_seven">
+                    <h3>Level Seven</h3>
+                    <ul id="level_seven_spells">
+                        
+                    </ul>
+                    <label for="add_level_seven">Add Level Seven Spell:</label>
+                    <input type="text" id="add_level_seven" placeholder="Spell Name">
+                </div>
+                <div class="level_eight">
+                    <h3>Level Eight</h3>
+                    <ul id="level_eight_spells">
+                        
+                    </ul>
+                    <label for="add_level_eight">Add Level Eight Spell:</label>
+                    <input type="text" id="add_level_eight" placeholder="Spell Name">
+                </div>
+                <div class="level_nine">
+                    <h3>Level Nine</h3>
+                    <ul id="level_nine_spells">
+                        
+                    </ul>
+                    <label for="add_level_nine">Add Level Nine Spell:</label>
+                    <input type="text" id="add_level_nine" placeholder="Spell Name">
                 </div>
             </div>
         </div>
-        <div class="abilityScores">
-            <h2>Ability Scores</h2>
-            <p id="strength">Strength: Bonus: </p>
-            <p id="dexterity">Dexterity: Bonus: </p>
-            <p id="constitution">Constitution: Bonus: </p>
-            <p id="intelligence">Intelligence: Bonus: </p>
-            <p id="wisdom">Wisdom: Bonus: </p>
-            <p id="charisma">Charisma: Bonus: </p>
-        </div>
-        <div class="saving_throws">
-            <h2>Saving Throws</h2>
-            <p id="strength_save">Strength: </p>
-            <p id="dexterity_save">Dexterity: </p>
-            <p id="constitution_save">Constitution: </p>
-            <p id="intelligence_save">Intelligence: </p>
-            <p id="wisdom_save">Wisdom: </p>
-            <p id="charisma_save">Charisma: </p>
-        </div>
-        <div class="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li id="acrobatics">Acrobatics <i class="ability">&lpar;Dex&rpar;</i>: </li>
-                <li id="animal_handling">Animal Handling <i class="ability">&lpar;Wis&rpar;</i>: </li>
-                <li id="arcana">Arcana <i class="ability">&lpar;Int&rpar;</i>: </li>
-                <li id="athletics">Athletics <i class="ability">&lpar;Str&rpar;</i>: </li>
-                <li id="deception">Deception <i class="ability">&lpar;Cha&rpar;</i>: </li>
-                <li id="history">History <i class="ability">&lpar;Int&rpar;</i>: </li>
-                <li id="insight">Insight <i class="ability">&lpar;Wis&rpar;</i>: </li>
-                <li id="intimidation">Intimidation <i class="ability">&lpar;Cha&rpar;</i>: </li>
-                <li id="investigation">Investigation <i class="ability">&lpar;Int&rpar;</i>: </li>
-                <li id="medicine">Medicine <i class="ability">&lpar;Wis&rpar;</i>: </li>
-                <li id="nature">Nature <i class="ability">&lpar;Int&rpar;</i>: </li>
-                <li id="perception">Perception <i class="ability">&lpar;Wis&rpar;</i>: </li>
-                <li id="performance">Performance <i class="ability">&lpar;Cha&rpar;</i>: </li>
-                <li id="persuasion">Persuasion <i class="ability">&lpar;Cha&rpar;</i>: </li>
-                <li id="religion">Religion <i class="ability">&lpar;Int&rpar;</i>: </li>
-                <li id="sleight_of_hand">Sleight of Hand <i class="ability">&lpar;Dex&rpar;</i>: </li>
-                <li id="stealth">Stealth <i class="abilty">&lpar;Dex&rpar;</i>: </li>
-                <li id="survivial">Survival <i class="ability">&lpar;Wis&rpar;</i>: </li>
-            </ul>
-        </div>
-        <div class="proficiencies">
-            <h2>Other Proficiencies and Languages</h2>
-            <p></p>
-        </div>
-        <div class="attacks">
-            <h2>Attacks and Spellcasting</h2>
-            <p>Item Name:</p>
-            <p>To Hit Bonus:</p>
-            <p>Damage Die w/ Bonus:</p>
-        </div>
-        <div class="about_character">
-            <h2>About Your Character</h2>
-            <div class="personality">
-                <h3>Personality Traits:</h3>
-                <p>Personality Trait</p>
-            </div>
-            <div class="ideals">
-                <h3>Ideals:</h3>
-                <p>Ideal</p>
-            </div>
-            <div class="bonds">
-                <h3>Bonds:</h3>
-                <p>Bond</p>
-            </div>
-            <div class="flaws">
-                <h3>Flaws:</h3>
-                <p>Flaw</p>
-            </div>
-        </div>
-        <div class="backstory">
-            <h2>Backstory</h2>
-        </div>
-        <div class="inventory">
-            <h2>Inventory</h2>
-            <div class="items">
-                <h3>Items</h3>
-                <p></p>
-            </div>
-            <div class="money">
-                <h3>Money</h3>
-                <p>CP <i>&lpar;Copper Pieces&rpar;</i>: </p>
-                <p>SP <i>&lpar;Silver Pieces&rpar;</i>: </p>
-                <p>EP <i>&lpar;Electrum Pieces&rpar;</i>: </p>
-                <p>GP <i>&lpar;Gold Pieces&rpar;</i>: </p>
-                <p>PP <i>&lpar;Platinum Pieces&rpar;</i>: </p>
-            </div>
-        </div>
-        <div class="features">
-            <h2>Features and Traits</h2>
-            <p></p>
-        </div>
-        <div class="spell_sheet">
-            <div class="spell_casting">
-                <h2>Spell Casting Ability</h2>
-                <p id="modifier">Spellcasting Modifier: </p>
-                <p id="bonus">Spellcasting Bonus: </p>
-                <p id="save">Spell Save DC <i>&lpar;Difficulty Class&rpar;</i>: </p>
-            </div>
-            <div class="spell_notes">
-                <h2>Spell Notes</h2>
-                <p>C = Concentration</p>
-                <p>Rt = Ritual</p>
-                <p>Ba = Bonus Action</p>
-                <p>Re = Reaction</p>
-                <p>In = Instantaneous</p>
-                <p>V = Verbal</p>
-                <p>S = Somatic</p>
-                <p>M = Material</p>
-            </div>
-            <h2>Spells</h2>
-            <div class="cantrips">
-                <h3>Cantrips</h3>
-                <ul id="cantrip_spells">
-
-                </ul>
-            </div>
-            <div class="level_one">
-                <h3>Level One</h3>
-                <ul id="level_one_spells">
-
-                </ul>
-            </div>
-            <div class="level_two">
-                <h3>Level Two</h3>
-                <ul id="level_two_spells">
-
-                </ul>
-            </div>
-            <div class="level_three">
-                <h3>Level Three</h3>
-                <ul id="level_three_spells">
-
-                </ul>
-            </div>
-            <div class="level_four">
-                <h3>Level Four</h3>
-                <ul id="level_four_spells">
-
-                </ul>
-            </div>
-            <div class="level_five">
-                <h3>Level Five</h3>
-                <ul id="level_five_spells">
-
-                </ul>
-            </div>
-            <div class="level_six">
-                <h3>Level Six</h3>
-                <ul id="level_six_spells">
-
-                </ul>
-            </div>
-            <div class="level_seven">
-                <h3>Level Seven</h3>
-                <ul id="level_seven_spells">
-
-                </ul>
-            </div>
-            <div class="level_eight">
-                <h3>Level Eight</h3>
-                <ul id="level_eight_spells">
-
-                </ul>
-            </div>
-            <div class="level_nine">
-                <h3>Level Nine</h3>
-                <ul id="level_nine_spells">
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="AI_chat">
-        <h2>Saga Weaver AI Chat</h2>
-        <p id="saga_chat">Chat logs will show up here</p>
-        <label for="AI_input">Enter prompt here:</label>
-        <input type="text" id="AI_input" name="AI_input">
+        
     </div>
     <footer>
         <img src="images/SagaWeaverAI_Logo.webp" alt="Saga Weaver AI Logo of red dragon circling S and W">
