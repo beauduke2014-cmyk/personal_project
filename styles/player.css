@@ -272,6 +272,10 @@
     padding: 5px;
 }
 
+.delete-btn {
+    margin-left: 15px;
+}
+
 @media screen and (min-width: 800px) {
     .character_page {
         display: grid;

@@ -28,7 +28,19 @@ const character = {
     electrum: 0,
     gold: 0,
     platinum: 0,
-    features: ""
+    features: "",
+    spells: {
+        cantrips: [],
+        level_one: [],
+        level_two: [],
+        level_three: [],
+        level_four: [],
+        level_five: [],
+        level_six: [],
+        level_seven: [],
+        level_eight: [],
+        level_nine: []
+    }
 }
 
 document.addEventListener("click", function(e) {
@@ -63,3 +75,57 @@ function makeEditable(span) {
         }
     })
 }
+
+function setupSpellInput(inputId, listId, spellArrayKey) {
+    
+    const input = document.getElementById(inputId);
+    const list = document.getElementById(listId);
+
+    input.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" && this.value.trim() != "") {
+
+            const newSpell = this.value.trim();
+
+            character.spells[spellArrayKey].push(newSpell);
+
+            this.value = "";
+
+            renderSpellList(list, character.spells[spellArrayKey]);
+        }
+    });
+}
+
+function renderSpellList(listElement, spellArray) {
+
+    listElement.innerHTML = ""
+
+    spellArray.forEach((spell, index) => {
+
+        const li = document.createElement('li');
+        li.textContent = spell;
+
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "x";
+        
+        deleteBtn.classList.add("delete-btn");
+
+        deleteBtn.addEventListener("click", function () {
+            spellArray.splice(index, 1);
+            renderSpellList(listElement, spellArray);
+        });
+    
+    li.appendChild(deleteBtn);
+    listElement.appendChild(li);
+    });
+}
+
+setupSpellInput("add_cantrip", "cantrip_spells", "cantrips");
+setupSpellInput("add_level_one", "level_one_spells", "level_one");
+setupSpellInput("add_level_two", "level_two_spells", "level_two");
+setupSpellInput("add_level_three", "level_three_spells", "level_three");
+setupSpellInput("add_level_four", "level_four_spells", "level_four");
+setupSpellInput("add_level_five", "level_five_spells", "level_five");
+setupSpellInput("add_level_six", "level_six_spells", "level_six");
+setupSpellInput("add_level_seven", "level_seven_spells", "level_seven");
+setupSpellInput("add_level_eight", "level_eight_spells", "level_eight");
+setupSpellInput("add_level_nine", "level_nine_spells", "level_nine");
