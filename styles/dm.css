@@ -1,0 +1,23 @@
+.title {
+    text-align: center;
+    font-size: 2em;
+}
+
+.dm_AI_chat {
+    margin: 5px;
+    text-align: center;
+}
+
+.dm_AI_chat p {
+    margin: 5px;
+    border-radius: 5px;
+    border: 2px solid #930a0c;
+    padding: 5px;
+}
+
+@media screen and (min-width: 800px) {
+    .dm_AI_chat {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+}

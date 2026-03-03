@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Carter Weber">
+    <meta description="An AI built to help with all aspects of running and playing a part in a Dungeons and Dragons campaign">
+    <title>Saga Weaver AI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/dm.css">
+    <script defer src="scripts/script.js"></script>
+</head>
+<body>
+    <header>
+        <img class="logo" src="images/SagaWeaverAI_Logo.webp" alt="Saga Weaver AI Logo of red dragon circling S and W">
+        <h1>Saga Weaver AI</h1>
+        <button class="menu-btn" aria-label="Open Navigation Menu Button" aria-controls="main-nav" aria-expanded="false">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </button>
+        <nav id="main-nav" class="hidden">
+            <a href="index.html">Home</a>
+            <a href="dm.html">DM</a>
+            <a href="player.html">Player</a>
+            <a href="sign_in.html">Sign In</a>
+        </nav>
+    </header>
+    <div class="dm_page">
+        <h2 class="title">Dungeon Master Page</h2>
+        <div class="dm_AI_chat">
+            <h2>Saga Weaver AI Chat</h2>
+            <p id="dm_saga_chat">Chat logs will show up here</p>
+            <label for="dm_AI_input">Enter prompt here:</label>
+            <input type="text" id="dm_AI_input" name="dm_AI_input">
+        </div>
+        <div class="dm_info">
+            <div class="enemy_stat_block">
+                <h2>Enemy Stat Blocks</h2>
+                <div class="enemy_info">
+                    <h3 class="enemy_name">Name: </h3>
+                    <p class="enemy_size">Size: </p>
+                    <p class="enemy_type">Type: </p>
+                    <p class="enemy_alignment">Alignment: </p>
+                </div>
+                <div class="extra_enemy_info">
+                    <p class="enemy_armor_class">Armor Class: </p>
+                    <p class="enemy_health">Hit Points: </p>
+                    <p class="enemy_speed">Speed: </p>
+                </div>
+                <div class="enemy_abilities">
+                    <p class="enemy_strength">Strength: Modifier: </p>
+                    <p class="enemy_dexterity">Dexterity: Modifier: </p>
+                    <p class="enemy_constitution">Constitution: Modifier: </p>
+                    <p class="enemy_intelligence">Intelligence: Modifier: </p>
+                    <p class="enemy_wisdom">Wisdom: Modifier: </p>
+                    <p class="enemy_charisma">Charisma: Modifier: </p>
+                </div>
+                <div class="enemy_features">
+                    <p class="enemy_resistances">Damage Resistances: </p>
+                    <p class="enemy_damage_immunities">Damage Immunities: </p>
+                    <p class="enemy_condition_immunities">Condition Immunities: </p>
+                    <p class="enemy_senses">Senses: </p>
+                    <p class="enemy_languages">Languages: </p>
+                    <p class="enemy_challenge_rating">Challenge: XP: </p>
+                    <p class="enemy_proficiency">Proficiency Bonus: </p>
+                </div>
+                <div class="enemy_traits">
+                    <h3>Traits</h3>
+                    <p class="enemy_trait">Name: Description: </p>
+                </div>
+                <div class="enemy_actions">
+                    <h3>Actions</h3>
+                    <p class="enemy_action">Name: Description: </p>
+                </div>
+            </div>
+            <div class="status_conditions">
+            </div>
+            <div class="key_story">
+                <h2>Key Story Points</h2>
+                <h3>Overall Story: </h3>
+                <ul>
+                    <li class="overall_key_story_point">Key Story Point</li>
+                </ul>
+                <div class="character">
+                    <h3 class="character_key_story">Character Name: </h3>
+                    <ul>
+                        <li class="character_key_story_point">Key Story Point</li>
+                    </ul>
+                </div>
+                <div class="npcs">
+                    <h2>NPC's</h2>
+                    <div class="npc">
+                        <p class="npc_name">Name: </p>
+                        <p class="npc_role">Role: </p>
+                        <p class="npc_notes">Extra Notes: </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <img src="images/SagaWeaverAI_Logo.webp" alt="Saga Weaver AI Logo of red dragon circling S and W">
+        <p>&copy;2026 Saga Weaver AI</p>
+        <p>Contact us: Email: fakeemail.gmail.com</p>
+    </footer>
+</body>
+</html>

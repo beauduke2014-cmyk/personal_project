@@ -1,3 +1,8 @@
+.title {
+    text-align: center;
+    font-size: 2em;
+}
+
 .character_info {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -284,12 +289,18 @@
 
     .character_sheet {
         grid-column: 1/2;
-        grid-row: 1/2;
+        grid-row: 2/3;
         border-right: 2px solid #0c0c0c;
+    }
+
+    .title {
+        grid-column: 1/3;
+        grid-row: 1/2;
     }
 
     .AI_chat {
         grid-column: 2/3;
+        grid-row: 2/3;
     }
 
 }
