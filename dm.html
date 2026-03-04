@@ -145,8 +145,48 @@
                         <li>the creature is ummune to poison and disease, although a poise or disease already in its system is suspended, not neutralized.</li>
                     </ul>
                 </div>
-                <div class="poisoned"></div>
+                <div class="poisoned">
+                    <h3>Poisoned</h3>
+                    <ul>
+                        <li>A poisoned creature has disadvantage on attack rolls and ability checks.</li>
+                    </ul>
+                </div>
+                <div class="prone">
+                    <h3>Prone</h3>
+                    <ul>
+                        <li>A prone creature's only movement option is to crawl, unless it stands up and thereby ends the condition.</li>
+                        <li>The creature has disadvantage on attack rolls.</li>
+                        <li>An attack roll against the creature ahs advantage if the attacker is within 5 feet of the creature. Otherwise, the attack roll has disadvantage.</li>
+                    </ul>
+                </div>
+                <div class="restrained">
+                    <h3>Restrained</h3>
+                    <ul>
+                        <li>A restrained creature's speed becomes 0, and it can't benefit from any bonus to its speed.</li>
+                        <li>Attack rolls agiainst the crature ahd advantage, and the creature's attack rolls have disadvantage.</li>
+                        <li>The creature has disadvantage on Dexterity saving throws.</li>
+                    </ul>
+                </div>
+                <div class="stunned">
+                    <h3>Stunned</h3>
+                    <ul>
+                        <li>A stunned creature is incapacitated &lpar;see the condition&rpar;, can't move, and can speak only falteringly.</li>
+                        <li>The creature automatically fails Strength and Dexterity saving throws.</li>
+                        <li>Attack rolls against the creature had advantage.</li>
+                    </ul>
+                </div>
+                <div class="unconscious">
+                    <h3>Unconscious</h3>
+                    <ul>
+                        <li>An unconscious creature is incapacitated &lpar;see the condition&rpar;, can't move or speak, and is unaware of its surroundings.</li>
+                        <li>The creature drops whatever it's holding and falls prone.</li>
+                        <li>The creature automatically fails Strength and Dexterity saving throws.</li>
+                        <li>Atatck rolls against the creature have advantage.</li>
+                        <li>Any attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.</li>
+                    </ul>
+                </div>
             </div>
+            
             <div class="actions_in_combat">
                 <div class="your_turn">
                     <h2>Things You Can Do on Your Turn</h2>
@@ -249,6 +289,444 @@
                         <p class="npc_notes">Extra Notes: </p>
                     </div>
                 </div>
+            </div>
+            <div class="difficulty_class">
+                <div class="setting_difficulty">
+                    <h2>Setting a DC &lpar;Difficulty Class&rpar;</h2>
+                    <table>
+                        <tr>
+                            <th>Difficulty</th>
+                            <th>DC</th>
+                        </tr>
+                        <tr>
+                            <td>Very easy</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Easy</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Moderate</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>Hard</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Very Hard</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>Nearly Impossible</td>
+                            <td>30</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tracking_difficulty">
+                    <h2>Tracking DCs</h2>
+                    <table>
+                        <tr>
+                            <th>Ground surface</th>
+                            <th>DC</th>
+                        </tr>
+                        <tr>
+                            <td>Soft surface such as snow</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Dirt or grass</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>Bare stone</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Each day since the creature passed</td>
+                            <td>+5</td>
+                        </tr>
+                        <tr>
+                            <td>Creature left a trail such as blood</td>
+                            <td>-5</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="damage_level">
+                <h2>Damage by Level and Severity</h2>
+                <table>
+                    <tr>
+                        <th>Level</th>
+                        <th>Setback</th>
+                        <th>Dangerous</th>
+                        <th>Deadly</th>
+                    </tr>
+                    <tr>
+                        <td>1-4</td>
+                        <td>1d10</td>
+                        <td>2d10</td>
+                        <td>4d10</td>
+                    </tr>
+                    <tr>
+                        <td>5-10</td>
+                        <td>2d10</td>
+                        <td>4d10</td>
+                        <td>10d10</td>
+                    </tr>
+                    <tr>
+                        <td>11-16</td>
+                        <td>4d10</td>
+                        <td>10d10</td>
+                        <td>18d10</td>
+                    </tr>
+                    <tr>
+                        <td>17-20</td>
+                        <td>10d10</td>
+                        <td>18d10</td>
+                        <td>24d10</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="objects">
+                <div class="object_armor">
+                    <h2>Object Armor Class</h2>
+                    <table>
+                        <tr>
+                            <th>Substance</th>
+                            <th>AC</th>
+                            <th>Substance</th>
+                            <th>AC</th>
+                        </tr>
+                        <tr>
+                            <td>Cloth, paper, rope</td>
+                            <td>11</td>
+                            <td>Iron, steel</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td>Crystal, glass, ice</td>
+                            <td>13</td>
+                            <td>Mithral</td>
+                            <td>21</td>
+                        </tr>
+                        <tr>
+                            <td>Wood, bone</td>
+                            <td>15</td>
+                            <td>Adamantine</td>
+                            <td>23</td>
+                        </tr>
+                        <tr>
+                            <td>Stone</td>
+                            <td>17</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="object_health">
+                    <h2>Object Hit Points</h2>
+                    <table>
+                        <tr>
+                            <th>Size</th>
+                            <th>Fragile</th>
+                            <th>Resilient</th>
+                        </tr>
+                        <tr>
+                            <td>Tiny &lpar;bottle, lock&rpar;</td>
+                            <td>2 &lpar;1d4&rpar;</td>
+                            <td>5 &lpar;2d4&rpar;</td>
+                        </tr>
+                        <tr>
+                            <td>Small &lpar;chest, lute&rpar;</td>
+                            <td>3 &lpar;1d6&rpar;</td>
+                            <td>10 &lpar;3d6&rpar;</td>
+                        </tr>
+                        <tr>
+                            <td>Medium &lpar;barrel, chandelier&rpar;</td>
+                            <td>4 &lpar;1d8&rpar;</td>
+                            <td>18 &lpar;4d8&rpar;</td>
+                        </tr>
+                        <tr>
+                            <td>Large &lpar;cart, 10-ft.-by-10-ft. window&rpar;</td>
+                            <td>5 &lpar;1d10&rpar;</td>
+                            <td>27 &lpar;5d10&rpar;</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="skill_and_abilities">
+                <h2>Skills and Associated Abilities</h2>
+                <table>
+                    <tr>
+                        <th>Skill</th>
+                        <th>Ability</th>
+                    </tr>
+                    <tr>
+                        <td>Acrobatics</td>
+                        <td>Dexterity</td>
+                    </tr>
+                    <tr>
+                        <td>Animal Handling</td>
+                        <td>Wisdom</td>
+                    </tr>
+                    <tr>
+                        <td>Arcana</td>
+                        <td>Intelligence</td>
+                    </tr>
+                    <tr>
+                        <td>Athletics</td>
+                        <td>Strength</td>
+                    </tr>
+                    <tr>
+                        <td>Deception</td>
+                        <td>Charisma</td>
+                    </tr>
+                    <tr>
+                        <td>History</td>
+                        <td>Intelligence</td>
+                    </tr>
+                    <tr>
+                        <td>Insight</td>
+                        <td>Wisdom</td>
+                    </tr>
+                    <tr>
+                        <td>Intimidation</td>
+                        <td>Charisma</td>
+                    </tr>
+                    <tr>
+                        <td>Investigation</td>
+                        <td>Intelligence</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Skill</th>
+                        <th>Ability</th>
+                    </tr>
+                    <tr>
+                        <td>Medicine</td>
+                        <td>Wisdom</td>
+                    </tr>
+                    <tr>
+                        <td>Nature</td>
+                        <td>Intelligence</td>
+                    </tr>
+                    <tr>
+                        <td>Perception</td>
+                        <td>Wisdom</td>
+                    </tr>
+                    <tr>
+                        <td>Performance</td>
+                        <td>Charisma</td>
+                    </tr>
+                    <tr>
+                        <td>Religion</td>
+                        <td>Intelligence</td>
+                    </tr>
+                    <tr>
+                        <td>Sleight of Hand</td>
+                        <td>Dexterity</td>
+                    </tr>
+                    <tr>
+                        <td>Stealth</td>
+                        <td>Dexterity</td>
+                    </tr>
+                    <tr>
+                        <td>Survival</td>
+                        <td>Wisdom</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="pricing">
+                <h2>Food, Drink, and Lodging</h2>
+                <table>
+                    <tr>
+                        <th>Item</th>
+                        <th>Cost</th>
+                    </tr>
+                    <tr>
+                        <td>Gallon of Ale</td>
+                        <td>2 silver pieces</td>
+                    </tr>
+                    <tr>
+                        <td>Mug of Ale</td>
+                        <td>4 copper pieces</td>
+                    </tr>
+                    <tr>
+                        <td>Banquet &lpar;per person&rpar;</td>
+                        <td>10 gold pieces</td>
+                    </tr>
+                    <tr>
+                        <td>Bread, loaf</td>
+                        <td>2 copper pieces</td>
+                    </tr>
+                    <tr>
+                        <td>Cheese, hunk</td>
+                        <td>1 silver piece</td>
+                    </tr>
+                    <tr>
+                        <td>Inn Stay &lpar;per day&rpar; Squalid</td>
+                        <td>7 copper pieces</td>
+                    </tr>
+                    <tr>
+                        <td>Inn Stay &lpar;per day&rpar; Poor</td>
+                        <td>1 silver piece</td>
+                    </tr>
+                    <tr>
+                        <td>Inn Stay &lpar;per day &rpar; Modest</td>
+                        <td>5 silver pieces</td>
+                    </tr>
+                    <tr>
+                        <td>Inn Stay &lpar;per day&rpar; Comfortable</td>
+                        <td>8 silver pieces</td>
+                    </tr>
+                    <tr>
+                        <td>Inn Stay &lpar;per day&rpar; Wealthy</td>
+                        <td>2 gold pieces</td>
+                    </tr>
+                    <tr>
+                        <td>Inn Stay &lpar;per day&rpar; Aristocratic</td>
+                        <td>4 gold pieces</td>
+                    </tr>
+                    <tr>
+                        <td>Meals &lpar;per day&rpar; Squalid</td>
+                        <td>3 copper pieces</td>
+                    </tr>
+                    <tr>
+                        <td>Meals &lpar;per day&rpar; Poor</td>
+                        <td>6 copper pieces</td>
+                    </tr>
+                    <tr>
+                        <td>Meal &lpar;per day&rpar; Modest</td>
+                        <td>3 silver pieces</td>
+                    </tr>
+                    <tr>
+                        <td>Meal &lpar;per day&rpar; Comfortable</td>
+                        <td>5 silver pieces</td>
+                    </tr>
+                    <tr>
+                        <td>Meal &lpar;per day&rpar; Wealthy</td>
+                        <td>8 silver pieces</td>
+                    </tr>
+                    <tr>
+                        <td>Meal &lpar;per day&rpar; Aristocratic</td>
+                        <td>2 gold pieces</td>
+                    </tr>
+                    <tr>
+                        <td>Meat, chunk</td>
+                        <td>3 silver pieces</td>
+                    </tr>
+                    <tr>
+                        <td>Common Wine &lpar;pitcher&rpar;</td>
+                        <td>2 silver pieces</td>
+                    </tr>
+                    <tr>
+                        <td>Fine Wine &lpar;bottle&rpar;</td>
+                        <td>10 gold pieces</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="services">
+                <h2>Services</h2>
+                <table>
+                    <tr>
+                        <th>Service</th>
+                        <th>Pay</th>
+                    </tr>
+                    <tr>
+                        <td>Coach Cab between towns</td>
+                        <td>3 copper pieces per mile</td>
+                    </tr>
+                    <tr>
+                        <td>Coach Cab within a city</td>
+                        <td>1 copper piece</td>
+                    </tr>
+                    <tr>
+                        <td>Skilled Hireling</td>
+                        <td>2 gold pieces per day</td>
+                    </tr>
+                    <tr>
+                        <td>Untrained Hireling</td>
+                        <td>2 silver pieces per day</td>
+                    </tr>
+                    <tr>
+                        <td>Messenger</td>
+                        <td>2 copper pieces per mile</td>
+                    </tr>
+                    <tr>
+                        <td>Road or Gate Toll</td>
+                        <td>1 copper piece</td>
+                    </tr>
+                    <tr>
+                        <td>Ship's Passage</td>
+                        <td>1 silver piece per mile</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="travel">
+                <h2>Travel Pace</h2>
+                <h3>Distance Traveled Per ...</h3>
+                <table>
+                    <tr>
+                        <th>Pace</th>
+                        <th>Minute</th>
+                        <th>Hour</th>
+                        <th>Day</th>
+                        <th>Effect</th>
+                    </tr>
+                    <tr>
+                        <td>Fast</td>
+                        <td>400 feet</td>
+                        <td>4 miles</td>
+                        <td>30 miles</td>
+                        <td>-5 penalty to passive Wisdom &lpar;Perception&rpar; scores</td>
+                    </tr>
+                    <tr>
+                        <td>Normal</td>
+                        <td>300 feet</td>
+                        <td>3 miles</td>
+                        <td>24 miles</td>
+                        <td>&mdash;</td>
+                    </tr>
+                    <tr>
+                        <td>Slow</td>
+                        <td>200 feet</td>
+                        <td>2 miles</td>
+                        <td>18 miles</td>
+                        <td>Able to use stealth</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="obscured">
+                <h2>Obscured Areas</h2>
+                <table>
+                    <tr>
+                        <th>Obscureness</th>
+                        <th>Effect</th>
+                        <th>Examples</th>
+                    </tr>
+                    <tr>
+                        <td>Lightly obscured</td>
+                        <td>Creatures have disadvantage on Wisdom &lpar;Percpetion&rpar; checks that rely on sight.</td>
+                        <td>Dim light, patchy fog, moderate foliage</td>
+                    </tr>
+                    <tr>
+                        <td>Heavily obscured</td>
+                        <td>Vision is blocked; creatures are effectively blinded.</td>
+                        <td>Darkness, opaque fog, dense foliage</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="encounter_distance">
+                <h2>Encounter Distance</h2>
+                <table>
+                    <tr>
+                        <th>Terrain</th>
+                        <th>Encounter Distance</th>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
