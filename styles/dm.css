@@ -6,12 +6,107 @@
 .dm_AI_chat {
     margin: 5px;
     text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0c0c0c;
 }
 
 .dm_AI_chat p {
     margin: 5px;
     border-radius: 5px;
     border: 2px solid #930a0c;
+    padding: 5px;
+}
+
+.enemy_stat_block {
+    border: 2px solid #0c0c0c;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.enemy_stat_block h2 {
+    text-align: center;
+}
+.enemy_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 5px;
+}
+
+.enemy_name {
+    grid-column: 1/4;
+    text-align: center;
+    border-bottom: 2px dashed #0c0c0c;
+    padding: 5px;
+}
+
+.enemy_size, .enemy_type, .enemy_alignment, .enemy_armor_class, .enemy_health, .enemy_speed, .enemy_strength, .enemy_dexterity, .enemy_constitution, .enemy_intelligence, .enemy_wisdom, .enemy_charisma, .enemy_resistances, .enemy_damage_immunities, .enemy_condition_immunities, .enemy_senses, .enemy_languages, .enemy_challenge_rating, .enemy_proficiency {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #930a0c;
+    margin: 5px;
+}
+
+.enemy_abilities {
+    border-top: 2px dashed #0c0c0c;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5px;
+}
+
+.enemy_features {
+    border-top: 2px dashed #0c0c0c;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5px;
+}
+
+.enemy_traits, .enemy_actions {
+    border-top: 2px dashed #0c0c0c;
+    padding: 5px;
+}
+
+.enemy_trait, .enemy_action {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #930a0c;
+    margin: 5px;
+}
+
+.point_of_origin {
+    text-align: center;
+    border-top: 2px solid #0c0c0c;
+    margin: 5px;
+}
+
+.point_of_origin table {
+    margin: auto;
+}
+
+tr:nth-child(even) {
+    background-color: #d5eeee;
+}
+
+table, th, td {
+    border: 2px solid #930a0c;
+    border-collapse: collapse;
+}
+
+.status_conditions {
+    margin: 5px;
+    border-top: 2px solid #0c0c0c;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.status_conditions h2 {
+    grid-column: 1/4;
+    margin: auto;
+}
+
+.blinded, .charmed, .deafened, .frightened, .grappled, .incapacitated, .invisible, .paralyzed, .petrified, .poisoned, .prone, .restrained, .stunned, .unconscious {
+    border: 2px solid #930a0c;
+    border-radius: 10px;
+    margin: 5px;
     padding: 5px;
 }
 

@@ -43,8 +43,6 @@
                     <p class="enemy_size">Size: </p>
                     <p class="enemy_type">Type: </p>
                     <p class="enemy_alignment">Alignment: </p>
-                </div>
-                <div class="extra_enemy_info">
                     <p class="enemy_armor_class">Armor Class: </p>
                     <p class="enemy_health">Hit Points: </p>
                     <p class="enemy_speed">Speed: </p>
@@ -74,6 +72,35 @@
                     <h3>Actions</h3>
                     <p class="enemy_action">Name: Description: </p>
                 </div>
+            </div>
+            <div class="point_of_origin">
+                <h2>Point of Origin for Each Shape</h2>
+                <table>
+                    <tr>
+                        <th>Shape</th>
+                        <th>Point of Origin</th>
+                    </tr>
+                    <tr>
+                        <td>Line</td>
+                        <td>One end of the line</td>
+                    </tr>
+                    <tr>
+                        <td>Cone</td>
+                        <td>Tip of the cone</td>
+                    </tr>
+                    <tr>
+                        <td>Cube</td>
+                        <td>Center of one side</td>
+                    </tr>
+                    <tr>
+                        <td>Sphere</td>
+                        <td> Very center of the sphere</td>
+                    </tr>
+                    <tr>
+                        <td>Cylinder</td>
+                        <td>Center of one of the flat ends</td>
+                    </tr>
+                </table>
             </div>
             <div class="status_conditions">
                 <h2>Conditions</h2>
@@ -797,7 +824,62 @@
                     </tr>
                     <tr>
                         <td>Half Cover</td>
-                        <td></td>
+                        <td>+2 bonus to AC and Dexterity saving throws against attacks and effects that originate on the opposite side of the cover.</td>
+                    </tr>
+                    <tr>
+                        <td>Three-Quarters Cover</td>
+                        <td>+5 bonus to AC  and Dexterity saving throws against attacks and effects that originate on the opposite side of the cover.</td>
+                    </tr>
+                    <tr>
+                        <td>Total Cover</td>
+                        <td>Can't be targeted directly by an attack or spell</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="light">
+                <h2>Light</h2>
+                <table>
+                    <tr>
+                        <th>Source</th>
+                        <th>Bright Light</th>
+                        <th>Dim Light</th>
+                        <th>Duration</th>
+                    </tr>
+                    <tr>
+                        <td>Candle</td>
+                        <td>5 feet</td>
+                        <td>+ 5 feet</td>
+                        <td>1 hour</td>
+                    </tr>
+                    <tr>
+                        <td>Lamp</td>
+                        <td>15 feet</td>
+                        <td>+30 feet</td>
+                        <td>6 hours</td>
+                    </tr>
+                    <tr>
+                        <td>Lantern, Bullseye</td>
+                        <td>60 feet, Cone</td>
+                        <td>+ 60 feet</td>
+                        <td>6 hours</td>
+                    </tr>
+                    <tr>
+                        <td>Lantern, Hooded</td>
+                        <td>30 feet</td>
+                        <td>+ 30 feet</td>
+                        <td>6 hours</td>
+                    </tr>
+                    <tr>
+                        <td>Lowered Hood</td>
+                        <td>&mdash;</td>
+                        <td>+ 5 feet</td>
+                        <td>&mdash;</td>
+                    </tr>
+                    <tr>
+                        <td>Torch</td>
+                        <td>20 feet</td>
+                        <td>+ 20 feet</td>
+                        <td>1 hour</td>
                     </tr>
                 </table>
             </div>
