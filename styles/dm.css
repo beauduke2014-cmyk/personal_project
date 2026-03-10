@@ -110,6 +110,211 @@ table, th, td {
     padding: 5px;
 }
 
+.petrified {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.unconscious {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.paralyzed {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.grappled {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.invisible {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.prone {
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+.restrained {
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+.stunned {
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+.frightened {
+    grid-column: 2/3;
+    grid-row: 5/6;
+}
+
+.actions_in_combat {
+    margin: 5px;
+    border-top: 2px solid #0c0c0c;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.actions_in_combat h2 {
+    text-align: center;
+}
+
+.your_turn {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #930a0c;
+    margin: 5px;
+    grid-column: 1/4;
+}
+
+.actions_title {
+    grid-column: 1/4;
+}
+
+.attack, .cast_a_spell, .dash, .disengage, .dodge, .help, .hide, .ready, .search, .use_magic_item, .use_an_object, .use_special_ability {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #930a0c;
+    margin: 5px;
+}
+
+.hide {
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+.search {
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+
+.jumps {
+    margin: 5px;
+    border-top: 2px solid #0c0c0c;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.long_jump p, .high_jump p {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #930a0c;
+    margin: 5px;
+}
+
+.long_jump h2, .high_jump h2 {
+    text-align: center;
+}
+
+.concentration {
+    margin: 5px;
+    border-top: 2px solid #0c0c0c;
+}
+
+.concentration h2 {
+    text-align: center;
+}
+
+.concentration p {
+    margin: 10px;
+}
+
+.key_story {
+    margin: 5px;
+    border-top: 2px solid #0c0c0c;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.key_story h2 {
+    grid-column: 1/3;
+    text-align: center;
+}
+
+.character {
+    border-left: 2px solid #0c0c0c;
+    padding: 5px;
+}
+
+.npcs {
+    border-top: 2px dotted #0c0c0c;
+    grid-column: 1/3;
+}
+
+.npcs h3 {
+    text-align: center;
+}
+
+.difficulty_class {
+    margin: 5px;
+    border-top: 2px solid #0c0c0c;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.difficulty_class h2 {
+    text-align: center;
+}
+
+.difficulty_class table {
+    margin: auto;
+}
+
+.tracking_difficulty {
+    border-left: 2px dotted #0c0c0c;
+}
+
+.damage_level {
+    margin: 5px;
+    border-top: 2px solid #0c0c0c;
+}
+
+.damage_level h2 {
+    text-align: center;
+}
+
+.damage_level table {
+    margin: auto;
+}
+
+.objects {
+    margin: 5px;
+    border-top: 2px solid #0c0c0c;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.objects h2 {
+    text-align: center;
+}
+
+.objects table {
+    margin: auto;
+}
+
+.object_health {
+    border-left: 2px dotted #0c0c0c;
+}
+
+.skill_and_abilities {
+    margin: 5px;
+    border-top: 2px solid #0c0c0c;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.skill_and_abilities h2 {
+    grid-column: 1/3;
+    text-align: center;
+}
+
+
 @media screen and (min-width: 800px) {
     .dm_AI_chat {
         grid-column: 2/3;

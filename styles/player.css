@@ -258,6 +258,13 @@
     border: none;
 }
 
+.concentration {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    padding: 5px;
+    margin: 5px;
+}
+
 .cantrips, .level_one, .level_two, .level_three, .level_four, .level_five, .level_six, .level_seven, .level_eight, .level_nine {
     padding: 5px;
     border-radius: 5px;
@@ -275,6 +282,45 @@
     border-radius: 5px;
     border: 2px solid #930a0c;
     padding: 5px;
+}
+
+.actions_in_combat {
+    margin: 5px;
+    border-top: 2px solid #0c0c0c;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.actions_in_combat h2 {
+    text-align: center;
+}
+
+.your_turn {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #930a0c;
+    margin: 5px;
+    grid-column: 1/4;
+}
+
+.actions_title {
+    grid-column: 1/4;
+}
+
+.attack, .cast_a_spell, .dash, .disengage, .dodge, .help, .hide, .ready, .search, .use_magic_item, .use_an_object, .use_special_ability {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #930a0c;
+    margin: 5px;
+}
+
+.hide {
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+.search {
+    grid-column: 3/4;
+    grid-row: 4/5;
 }
 
 .delete-btn {
