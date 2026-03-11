@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta author="Carter Weber">
-    <meta description="An AI built to help with all aspects of running and playing a part in a Dungeons and Dragons campaign">
+    <meta name="author" content="Carter Weber">
+    <meta name="description" content="An AI built to help with all aspects of running and playing a part in a Dungeons and Dragons campaign">
     <title>Saga Weaver AI</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles/style.css">
@@ -29,10 +29,10 @@
     </header>
     <div class="dm_page">
         <h2 class="title">Dungeon Master Page</h2>
-        <div class="dm_AI_chat">
+        <div class="dm_chat">
             <h2>Saga Weaver AI Chat</h2>
-            <p id="dm_saga_chat">Chat logs will show up here</p>
-            <label for="dm_AI_input">Enter prompt here:</label>
+            <p id="dm_chat_log">Chat logs will show up here</p>
+            <label for="dm_chat_input">Enter prompt here:</label>
             <input type="text" id="dm_AI_input" name="dm_AI_input">
         </div>
         <div class="dm_info">
@@ -48,12 +48,30 @@
                     <p class="enemy_speed">Speed: </p>
                 </div>
                 <div class="enemy_abilities">
-                    <p class="enemy_strength">Strength: Modifier: </p>
-                    <p class="enemy_dexterity">Dexterity: Modifier: </p>
-                    <p class="enemy_constitution">Constitution: Modifier: </p>
-                    <p class="enemy_intelligence">Intelligence: Modifier: </p>
-                    <p class="enemy_wisdom">Wisdom: Modifier: </p>
-                    <p class="enemy_charisma">Charisma: Modifier: </p>
+                    <div class="strength">
+                        <p class="enemy_strength">Strength:</p>
+                        <p class="enemy_strength_modifier">Modifier: </p>
+                    </div>
+                    <div class="dexterity">
+                        <p class="enemy_dexterity">Dexterity: </p>
+                        <p class="enemy_dexterity_modifier">Modifier: </p>
+                    </div>
+                    <div class="constitution">
+                        <p class="enemy_constitution">Constitution: </p>
+                        <p class="enemy_constitution_modifier">Modifier: </p>
+                    </div>
+                    <div class="intelligence">
+                        <p class="enemy_intelligence">Intelligence: </p>
+                        <p class="enemy_intelligence_modifier">Modifier: </p>
+                    </div>
+                    <div class="wisdom">
+                        <p class="enemy_wisdom">Wisdom: </p>
+                        <p class="enemy_widsom_modifier">Modifier: </p>
+                    </div>
+                    <div class="charisma">
+                        <p class="enemy_charisma">Charisma: </p>
+                        <p class="enemy_charisma_modifier">Modifier: </p>
+                    </div>
                 </div>
                 <div class="enemy_features">
                     <p class="enemy_resistances">Damage Resistances: </p>
@@ -61,7 +79,8 @@
                     <p class="enemy_condition_immunities">Condition Immunities: </p>
                     <p class="enemy_senses">Senses: </p>
                     <p class="enemy_languages">Languages: </p>
-                    <p class="enemy_challenge_rating">Challenge: XP: </p>
+                    <p class="enemy_challenge_rating">Challenge Rating: </p>
+                    <p class="enemy_xp">XP: </p>
                     <p class="enemy_proficiency">Proficiency Bonus: </p>
                 </div>
                 <div class="enemy_traits">
@@ -94,7 +113,7 @@
                     </tr>
                     <tr>
                         <td>Sphere</td>
-                        <td> Very center of the sphere</td>
+                        <td> The very center of the sphere</td>
                     </tr>
                     <tr>
                         <td>Cylinder</td>
@@ -127,7 +146,7 @@
                 <div class="frightened">
                     <h3>Frightened</h3>
                     <ul>
-                        <li>A frightened creature has disadvantage on avility checks and attack rolls while the source of its fear is within line of sight.</li>
+                        <li>A frightened creature has disadvantage on ability checks and attack rolls while the source of its fear is within line of sight.</li>
                         <li>The creature can't willingly move closer to the source of its fear.</li>
                     </ul>
                 </div>
@@ -135,8 +154,8 @@
                     <h3>Grappled</h3>
                     <ul>
                         <li>A grappled creature's speed becomes 0, and it can't benefit from any bonus to its speed.</li>
-                        <li>The condition ends of the grappler is incapacitated &lpar;see the condition&rpar;.</li>
-                        <li>The condition also ends if an effect remove the grappled creature from the reach of the grappler or grappling effect, such as when a creature is hurled by the thunderwave spell.</li>
+                        <li>The condition ends if the grappler is incapacitated &lpar;see the condition&rpar;.</li>
+                        <li>The condition also ends if an effect removes the grappled creature from the reach of the grappler or grappling effect, such as when a creature is hurled by the thunderwave spell.</li>
                     </ul>
                 </div>
                 <div class="incapacitated">
@@ -148,7 +167,7 @@
                 <div class="invisible">
                     <h3>Invisible</h3>
                     <ul>
-                        <li>An invisible creatue is impossible to see without the aid of magic or a special sense. For the purpose of hiding, the creature is heavily obscured. The creature's location can be detected by any noise it makes or any tracks it leaves.</li>
+                        <li>An invisible creature is impossible to see without the aid of magic or a special sense. For the purpose of hiding, the creature is heavily obscured. The creature's location can be detected by any noise it makes or any tracks it leaves.</li>
                         <li>Attack rolls against the creature have disadvantage, and the creature's attack rolls have advantage.</li>
                     </ul>
                 </div>
@@ -158,18 +177,18 @@
                         <li>A paralyzed creature is incapacitated &lpar;see the condition&rpar; and can't move or speak.</li>
                         <li>The creature automatically fails Strength and Dexterity saving throws.</li>
                         <li>Attack rolls against the creature have advantage.</li>
-                        <li>Any attack that hist the creature is a critical hit if the attacker is within 5 feet of the creature.</li>
+                        <li>Any attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.</li>
                     </ul>
                 </div>
                 <div class="petrified">
                     <h3>Petrified</h3>
                     <ul>
-                        <li>A petrified creature is transformed, along with any nonmagical object it is wearing or carrying, into a solid inanimate substance &lpar;usually stone&rpar;. Its weight uncreases by a factor of ten, and it ceases aging.</li>
+                        <li>A petrified creature is transformed, along with any nonmagical object it is wearing or carrying, into a solid inanimate substance &lpar;usually stone&rpar;. Its weight increases by a factor of ten, and it ceases aging.</li>
                         <li>The creature is incapacitated &lpar;see the condition&rpar;, can't move or speak, and is unaware of its surroundings.</li>
                         <li>Attack rolls against the creature have advantage.</li>
                         <li>The creature automatically fails Strength and Dexterity saving throws.</li>
                         <li>The creature has resistance to all damage.</li>
-                        <li>the creature is ummune to poison and disease, although a poise or disease already in its system is suspended, not neutralized.</li>
+                        <li>the creature is immune to poison and disease, although a poison or disease already in its system is suspended, not neutralized.</li>
                     </ul>
                 </div>
                 <div class="poisoned">
@@ -183,14 +202,14 @@
                     <ul>
                         <li>A prone creature's only movement option is to crawl, unless it stands up and thereby ends the condition.</li>
                         <li>The creature has disadvantage on attack rolls.</li>
-                        <li>An attack roll against the creature ahs advantage if the attacker is within 5 feet of the creature. Otherwise, the attack roll has disadvantage.</li>
+                        <li>An attack roll against the creature has advantage if the attacker is within 5 feet of the creature. Otherwise, the attack roll has disadvantage.</li>
                     </ul>
                 </div>
                 <div class="restrained">
                     <h3>Restrained</h3>
                     <ul>
                         <li>A restrained creature's speed becomes 0, and it can't benefit from any bonus to its speed.</li>
-                        <li>Attack rolls agiainst the crature ahd advantage, and the creature's attack rolls have disadvantage.</li>
+                        <li>Attack rolls agiainst the creature have advantage, and the creature's attack rolls have disadvantage.</li>
                         <li>The creature has disadvantage on Dexterity saving throws.</li>
                     </ul>
                 </div>
@@ -199,7 +218,7 @@
                     <ul>
                         <li>A stunned creature is incapacitated &lpar;see the condition&rpar;, can't move, and can speak only falteringly.</li>
                         <li>The creature automatically fails Strength and Dexterity saving throws.</li>
-                        <li>Attack rolls against the creature had advantage.</li>
+                        <li>Attack rolls against the creature have advantage.</li>
                     </ul>
                 </div>
                 <div class="unconscious">
@@ -208,7 +227,7 @@
                         <li>An unconscious creature is incapacitated &lpar;see the condition&rpar;, can't move or speak, and is unaware of its surroundings.</li>
                         <li>The creature drops whatever it's holding and falls prone.</li>
                         <li>The creature automatically fails Strength and Dexterity saving throws.</li>
-                        <li>Atatck rolls against the creature have advantage.</li>
+                        <li>Attack rolls against the creature have advantage.</li>
                         <li>Any attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.</li>
                     </ul>
                 </div>
@@ -615,6 +634,12 @@
                         <td>Inn Stay &lpar;per day&rpar; Wealthy</td>
                         <td>2 gold pieces</td>
                     </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Item</th>
+                        <th>Cost</th>
+                    </tr>
                     <tr>
                         <td>Inn Stay &lpar;per day&rpar; Aristocratic</td>
                         <td>4 gold pieces</td>
@@ -750,7 +775,7 @@
             </div>
             <div class="encounter_distance">
                 <h2>Encounter Distance</h2>
-                <table>
+                <table class="terrain">
                     <tr>
                         <th>Terrain</th>
                         <th>Encounter Distance</th>
@@ -797,7 +822,7 @@
                 <table>
                     <tr>
                         <th>Visiblity Outdoors</th>
-                        <th></th>
+                        <th>Visibility Distance</th>
                     </tr>
                     <tr>
                         <td>Clear day, no obstructions</td>

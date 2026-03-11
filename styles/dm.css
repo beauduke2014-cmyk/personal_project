@@ -3,14 +3,14 @@
     font-size: 2em;
 }
 
-.dm_AI_chat {
+.dm_chat {
     margin: 5px;
     text-align: center;
     padding-bottom: 10px;
     border-bottom: 2px solid #0c0c0c;
 }
 
-.dm_AI_chat p {
+.dm_chat p {
     margin: 5px;
     border-radius: 5px;
     border: 2px solid #930a0c;
@@ -39,7 +39,7 @@
     padding: 5px;
 }
 
-.enemy_size, .enemy_type, .enemy_alignment, .enemy_armor_class, .enemy_health, .enemy_speed, .enemy_strength, .enemy_dexterity, .enemy_constitution, .enemy_intelligence, .enemy_wisdom, .enemy_charisma, .enemy_resistances, .enemy_damage_immunities, .enemy_condition_immunities, .enemy_senses, .enemy_languages, .enemy_challenge_rating, .enemy_proficiency {
+.enemy_size, .enemy_type, .enemy_alignment, .enemy_armor_class, .enemy_health, .enemy_speed, .strength, .dexterity, .constitution, .intelligence, .wisdom, .charisma, .enemy_resistances, .enemy_damage_immunities, .enemy_condition_immunities, .enemy_senses, .enemy_languages, .enemy_challenge_rating, .enemy_proficiency, .enemy_xp {
     padding: 5px;
     border-radius: 5px;
     border: 2px solid #930a0c;
@@ -101,6 +101,10 @@ table, th, td {
 .status_conditions h2 {
     grid-column: 1/4;
     margin: auto;
+}
+
+.status_conditions h3, .actions_in_combat h3 {
+    text-align: center;
 }
 
 .blinded, .charmed, .deafened, .frightened, .grappled, .incapacitated, .invisible, .paralyzed, .petrified, .poisoned, .prone, .restrained, .stunned, .unconscious {
@@ -314,10 +318,119 @@ table, th, td {
     text-align: center;
 }
 
+.pricing {
+    margin: 5px;
+    border-top: 2px solid #0c0c0c;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.pricing h2 {
+    grid-column: 1/3;
+    text-align: center;
+}
+
+.services {
+    margin: 5px;
+    border-top: 2px solid #0c0c0c;
+}
+
+.services h2 {
+    text-align: center;
+}
+
+.services table {
+    margin: auto;
+}
+
+.travel {
+    margin: 5px;
+    border-top: 2px solid #0c0c0c;
+}
+
+.travel h2, .travel h3 {
+    text-align: center;
+}
+
+.travel table {
+    margin: auto;
+}
+
+.obscured {
+    margin: 5px;
+    border-top: 2px solid #0c0c0c;
+}
+
+.obscured h2 {
+    text-align: center;
+}
+
+.obscured table {
+    margin: auto;
+}
+
+.encounter_distance {
+    margin: 5px;
+    border-top: 2px solid #0c0c0c;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.terrain {
+    grid-column: 1/3;
+}
+
+.encounter_distance h2 {
+    text-align: center;
+    grid-column: 1/3;
+}
+
+.cover {
+    margin: 5px;
+    border-top: 2px solid #0c0c0c;
+}
+
+.cover h2 {
+    text-align: center;
+}
+
+.cover table {
+    margin: auto;
+}
+
+.light {
+    margin: 5px;
+    border-top: 2px solid #0c0c0c;
+}
+
+.light h2 {
+    text-align: center;
+}
+
+.light table {
+    margin: auto;
+}
 
 @media screen and (min-width: 800px) {
-    .dm_AI_chat {
+
+    .dm_page {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .title {
+        grid-column: 1/3;
+    }
+
+    .dm_chat {
         grid-column: 2/3;
         grid-row: 2/3;
+        border: none;
+    }
+
+    .dm_info {
+        border-right: 2px solid #0c0c0c;
     }
 }
